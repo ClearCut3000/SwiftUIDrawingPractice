@@ -11,6 +11,8 @@
 		366FE15528CFBB9D0005209B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE15428CFBB9D0005209B /* ContentView.swift */; };
 		366FE15728CFBBA30005209B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15628CFBBA30005209B /* Assets.xcassets */; };
 		366FE15A28CFBBA30005209B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15928CFBBA30005209B /* Preview Assets.xcassets */; };
+		366FE16128CFBC790005209B /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE16028CFBC790005209B /* Triangle.swift */; };
+		366FE16328CFC8010005209B /* HTMLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE16228CFC8010005209B /* HTMLTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		366FE15428CFBB9D0005209B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		366FE15628CFBBA30005209B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		366FE15928CFBBA30005209B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		366FE16028CFBC790005209B /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		366FE16228CFC8010005209B /* HTMLTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				366FE15428CFBB9D0005209B /* ContentView.swift */,
 				366FE15628CFBBA30005209B /* Assets.xcassets */,
 				366FE15828CFBBA30005209B /* Preview Content */,
+				366FE16028CFBC790005209B /* Triangle.swift */,
+				366FE16228CFC8010005209B /* HTMLTextView.swift */,
 			);
 			path = SwiftUIDrawingPractice;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366FE16128CFBC790005209B /* Triangle.swift in Sources */,
 				366FE15528CFBB9D0005209B /* ContentView.swift in Sources */,
+				366FE16328CFC8010005209B /* HTMLTextView.swift in Sources */,
 				366FE15328CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
