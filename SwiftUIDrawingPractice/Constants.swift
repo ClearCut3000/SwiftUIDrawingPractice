@@ -13,8 +13,6 @@ enum htmlHelper {
                                   <!DOCTYPE html>
                                   <html lang="en-GB">
                                   <head>
-                                  <meta charset="utf-8">
-                                  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
                                   <link rel="stylesheet" type="text/css" href="prism.css" />
                                   <script src="prism.js"></script>
                                   </head>
@@ -45,6 +43,7 @@ Path { path in
                                   lineCap: .round,
                                   lineJoin: .round))
 """
+
   static let triangleShapeCode = """
 struct TriangleShapeStruct: Shape {
   func path(in rect: CGRect) -> Path {
@@ -82,8 +81,12 @@ struct Arc: Shape {
     return path
   }
 }
-// In SwiftUI 0 degrees is not straight upwards, but instead directly to the right.
-// Shapes measure their coordinates from the bottom-left corner rather than the top-left corner, which means SwiftUI goes the other way around from one angle to the other. This is, in my not very humble opinion, extremely alien.
+// In SwiftUI 0 degrees is not straight upwards,
+// but instead directly to the right.
+// Shapes measure their coordinates from
+// the bottom-left corner rather than the top-left corner,
+// which means SwiftUI goes the other way around from one
+// angle to the other.
 Arc(startAngle: .degrees(0),
     endAngle: .degrees(110),
     clockwise: true)

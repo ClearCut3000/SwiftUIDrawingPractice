@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrianglePath: View {
-  @State private var webViewHeight: CGFloat = .zero
 
   var body: some View {
     VStack {
@@ -20,8 +19,8 @@ struct TrianglePath: View {
         path.closeSubpath()
       }
       .stroke(.blue, style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
-      CodeView(dynamicHeight: $webViewHeight, htmlContentBody: codeHelper.triangleCode)
-        .frame(height: webViewHeight)
+      
+      SampleCodeView(htmlContentBody: codeHelper.triangleCode)
     }
     .padding(10)
     .background(Color(UIHelper.backgroundDarkColor))

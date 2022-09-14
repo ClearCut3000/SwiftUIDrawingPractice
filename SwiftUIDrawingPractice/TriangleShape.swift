@@ -14,23 +14,19 @@ struct TriangleShape: View {
     ZStack {
       Color(UIHelper.backgroundDarkColor)
         .ignoresSafeArea()
-      VStack {
-        TriangleShapeStruct()
+      VStack(spacing: 30) {
+        Triangle()
           .stroke(.red, style: StrokeStyle(lineWidth: 10,
                                            lineCap: .round,
                                            lineJoin: .round))
           .frame(width: 250, height: 250)
-
-        CodeView(dynamicHeight: $webViewHeight, htmlContentBody: codeHelper.triangleShapeCode)
-          .frame(height: webViewHeight)
+        SampleCodeView(htmlContentBody: codeHelper.triangleShapeCode)
       }
-      .padding(10)
-      .background(Color(UIHelper.backgroundDarkColor))
     }
   }
 }
 
-struct TriangleShapeStruct: Shape {
+struct Triangle: Shape {
   func path(in rect: CGRect) -> Path {
     var path = Path()
     path.move(to: CGPoint(x: rect.midX, y: rect.minY))

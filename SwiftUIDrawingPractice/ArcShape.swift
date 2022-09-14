@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ArcShape: View {
-    var body: some View {
-      Arc(startAngle: .degrees(0),
-          endAngle: .degrees(110),
+  
+  var body: some View {
+    ZStack {
+      Color(UIHelper.backgroundDarkColor)
+        .ignoresSafeArea()
+      VStack {
+        Arc(startAngle: .degrees(0),
+            endAngle: .degrees(110),
             clockwise: true)
-        .stroke(.blue, lineWidth: 10)
-        .frame(width: 300, height: 300)
+          .stroke(.green, lineWidth: 15)
+          .frame(width: 300, height: 300)
+
+        SampleCodeView(htmlContentBody: codeHelper.arcShapeCode)
+      }
     }
+  }
 }
 
 struct Arc: Shape {
