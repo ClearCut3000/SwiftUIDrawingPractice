@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct Triangle: View {
-
+struct TrianglePath: View {
   @State private var webViewHeight: CGFloat = .zero
 
   var body: some View {
@@ -25,12 +24,12 @@ struct Triangle: View {
         .frame(height: webViewHeight)
     }
     .padding(10)
-    .background(.black)
+    .background(Color(UIHelper.backgroundDarkColor))
   }
 }
 
 struct Triangle_Previews: PreviewProvider {
   static var previews: some View {
-    Triangle()
+    TrianglePath()
   }
 }

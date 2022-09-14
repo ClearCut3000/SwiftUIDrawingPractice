@@ -9,7 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Triangle()
+      NavigationView {
+        VStack {
+          NavigationLink {
+            TrianglePath()
+          } label: {
+            Text("TrianglePath()")
+              .padding(10)
+          }
+
+        }
+        .navigationTitle("Shapes, Structs and Animation Samples")
+        .navigationBarTitleDisplayMode(.inline)
+      }
     }
 }
 

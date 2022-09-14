@@ -17,7 +17,7 @@ struct CodeView: UIViewRepresentable {
   var webView: WKWebView = WKWebView()
 
   //MARK: - Coordinator
-  class Coordinator: NSObject, WKNavigationDelegate {
+  class Coordinator: NSObject, WKNavigationDelegate, UIWebViewDelegate {
     var parent: CodeView
 
     init(_ parent: CodeView) {
@@ -44,7 +44,7 @@ struct CodeView: UIViewRepresentable {
     webView.navigationDelegate = context.coordinator
     webView.scrollView.bounces = false
     webView.isOpaque = false
-    webView.backgroundColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1.0)
+    webView.backgroundColor = UIHelper.backgroundDarkColor
     let htmlContent = htmlHelper.htmlContentHead + htmlContentBody + htmlHelper.htmlContendTail
     webView.loadHTMLString(htmlContent, baseURL: Bundle.main.resourceURL)
     return webView
