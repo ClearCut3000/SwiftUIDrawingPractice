@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		366FE15328CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE15228CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift */; };
-		366FE15528CFBB9D0005209B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE15428CFBB9D0005209B /* ContentView.swift */; };
+		366FE15528CFBB9D0005209B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE15428CFBB9D0005209B /* InitialView.swift */; };
 		366FE15728CFBBA30005209B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15628CFBBA30005209B /* Assets.xcassets */; };
 		366FE15A28CFBBA30005209B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15928CFBBA30005209B /* Preview Assets.xcassets */; };
 		366FE16128CFBC790005209B /* TrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE16028CFBC790005209B /* TrianglePath.swift */; };
@@ -18,12 +18,14 @@
 		36E92C4428D2461E0058C7E5 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E92C4328D2461E0058C7E5 /* TriangleShape.swift */; };
 		36E92C4628D253DE0058C7E5 /* ArcShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E92C4528D253DE0058C7E5 /* ArcShape.swift */; };
 		36E92C4C28D290180058C7E5 /* CodeSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E92C4B28D290180058C7E5 /* CodeSampleView.swift */; };
+		36E92C4F28D390640058C7E5 /* FlowerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E92C4E28D390640058C7E5 /* FlowerShape.swift */; };
+		36E92C5328D3BB0C0058C7E5 /* PopupCodeSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E92C5228D3BB0B0058C7E5 /* PopupCodeSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		366FE14F28CFBB9D0005209B /* SwiftUIDrawingPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDrawingPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		366FE15228CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDrawingPracticeApp.swift; sourceTree = "<group>"; };
-		366FE15428CFBB9D0005209B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		366FE15428CFBB9D0005209B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		366FE15628CFBBA30005209B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		366FE15928CFBBA30005209B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		366FE16028CFBC790005209B /* TrianglePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrianglePath.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		36E92C4328D2461E0058C7E5 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
 		36E92C4528D253DE0058C7E5 /* ArcShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShape.swift; sourceTree = "<group>"; };
 		36E92C4B28D290180058C7E5 /* CodeSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleView.swift; sourceTree = "<group>"; };
+		36E92C4E28D390640058C7E5 /* FlowerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerShape.swift; sourceTree = "<group>"; };
+		36E92C5228D3BB0B0058C7E5 /* PopupCodeSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCodeSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,18 +70,17 @@
 		366FE15128CFBB9D0005209B /* SwiftUIDrawingPractice */ = {
 			isa = PBXGroup;
 			children = (
-				36E92C3228D08AEC0058C7E5 /* Info.plist */,
-				366FE15228CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift */,
-				366FE15428CFBB9D0005209B /* ContentView.swift */,
+				36E92C4D28D2A6A40058C7E5 /* SampleView's */,
 				366FE15628CFBBA30005209B /* Assets.xcassets */,
+				36E92C4B28D290180058C7E5 /* CodeSampleView.swift */,
+				36E92C4128D117920058C7E5 /* Constants.swift */,
+				366FE15428CFBB9D0005209B /* InitialView.swift */,
+				36E92C3228D08AEC0058C7E5 /* Info.plist */,
 				366FE15828CFBBA30005209B /* Preview Content */,
-				366FE16028CFBC790005209B /* TrianglePath.swift */,
 				36E92C3E28D0D0760058C7E5 /* prism.css */,
 				36E92C3D28D0D0760058C7E5 /* prism.js */,
-				36E92C4128D117920058C7E5 /* Constants.swift */,
-				36E92C4328D2461E0058C7E5 /* TriangleShape.swift */,
-				36E92C4528D253DE0058C7E5 /* ArcShape.swift */,
-				36E92C4B28D290180058C7E5 /* CodeSampleView.swift */,
+				366FE15228CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift */,
+				36E92C5228D3BB0B0058C7E5 /* PopupCodeSample.swift */,
 			);
 			path = SwiftUIDrawingPractice;
 			sourceTree = "<group>";
@@ -88,6 +91,17 @@
 				366FE15928CFBBA30005209B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36E92C4D28D2A6A40058C7E5 /* SampleView's */ = {
+			isa = PBXGroup;
+			children = (
+				36E92C4528D253DE0058C7E5 /* ArcShape.swift */,
+				366FE16028CFBC790005209B /* TrianglePath.swift */,
+				36E92C4328D2461E0058C7E5 /* TriangleShape.swift */,
+				36E92C4E28D390640058C7E5 /* FlowerShape.swift */,
+			);
+			path = "SampleView's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +177,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				366FE16128CFBC790005209B /* TrianglePath.swift in Sources */,
+				36E92C5328D3BB0C0058C7E5 /* PopupCodeSample.swift in Sources */,
 				36E92C4628D253DE0058C7E5 /* ArcShape.swift in Sources */,
-				366FE15528CFBB9D0005209B /* ContentView.swift in Sources */,
+				366FE15528CFBB9D0005209B /* InitialView.swift in Sources */,
 				36E92C4228D117920058C7E5 /* Constants.swift in Sources */,
 				366FE15328CFBB9D0005209B /* SwiftUIDrawingPracticeApp.swift in Sources */,
 				36E92C4428D2461E0058C7E5 /* TriangleShape.swift in Sources */,
+				36E92C4F28D390640058C7E5 /* FlowerShape.swift in Sources */,
 				36E92C4C28D290180058C7E5 /* CodeSampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

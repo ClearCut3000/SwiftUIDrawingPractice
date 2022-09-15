@@ -17,7 +17,7 @@ struct SampleCodeView: UIViewRepresentable {
     webView.scrollView.bounces = false
     webView.isOpaque = false
     webView.backgroundColor = UIHelper.backgroundDarkColor
-    let htmlContent = htmlHelper.htmlContentHead + htmlContentBody.trimmingCharacters(in: .newlines) + htmlHelper.htmlContendTail
+    let htmlContent = HTMLHelper.htmlContentHead + htmlContentBody.trimmingCharacters(in: .newlines) + HTMLHelper.htmlContendTail
     webView.loadHTMLString(htmlContent, baseURL: Bundle.main.resourceURL)
     return webView
   }

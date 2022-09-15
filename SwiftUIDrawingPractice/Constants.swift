@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum htmlHelper {
+enum HTMLHelper {
   static let htmlContentHead: String = """
                                   <!DOCTYPE html>
                                   <html lang="en-GB">
@@ -30,7 +30,27 @@ enum UIHelper {
   static let backgroundDarkColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1.0)
 }
 
-enum codeHelper {
+enum CodeLibrary {
+  static let flowerShape = """
+  struct Flower: Shape {
+    var petalOffset = -20.0
+    var petalWidth = 100.0
+
+    func path(in rect: CGRect) -> Path {
+      var path = Path()
+      for number in stride(from: 0, to: Double.pi * 2, by: Double.pi / 8) {
+        let rotation = CGAffineTransform(rotationAngle: number)
+        let position = rotation.concatenating(CGAffineTransform(translationX: rect.width / 2,
+                                                                y: rect.height / 2))
+        let originalPetal = Path(ellipseIn: CGRect(x: petalOffset, y: 0, width: petalWidth, height: rect.width / 2))
+        let rotatedPetal = originalPetal.applying(position)
+        path.addPath(rotatedPetal)
+      }
+      return path
+    }
+  }
+  """
+
   static let triangleCode = """
 Path { path in
   path.move(to: CGPoint(x: 200, y: 100))
@@ -64,33 +84,43 @@ struct TriangleShapeStruct: Shape {
 """
 
   static let arcShapeCode = """
-struct Arc: Shape {
+// Arc shape with insets and corforming InsettableShape Protocol
+struct Arc: InsettableShape {
   let startAngle: Angle
   let endAngle: Angle
   let clockwise: Bool
+  var insetAmount = 0.0
+
   func path(in rect: CGRect) -> Path {
     let rotationAdjustment = Angle.degrees(90)
     let modifiedStart = startAngle - rotationAdjustment
     let modifiedEnd = endAngle - rotationAdjustment
     var path = Path()
     path.addArc(center: CGPoint(x: rect.midX, y: rect.midY),
-                radius: rect.width / 2,
+                radius: rect.width / 2 - insetAmount,
                 startAngle: modifiedStart,
                 endAngle: modifiedEnd,
                 clockwise: !clockwise)
     return path
   }
+
+  func inset(by amount: CGFloat) -> some InsettableShape {
+    var arc = self
+    arc.insetAmount += amount
+    return arc
+  }
 }
-// In SwiftUI 0 degrees is not straight upwards,
-// but instead directly to the right.
-// Shapes measure their coordinates from
-// the bottom-left corner rather than the top-left corner,
-// which means SwiftUI goes the other way around from one
-// angle to the other.
+/* In SwiftUI 0 degrees is not straight upwards,
+   but instead directly to the right.
+   Shapes measure their coordinates from
+   the bottom-left corner rather than the top-left corner,
+   which means SwiftUI goes the other way around from one
+   angle to the other.
+*/
 Arc(startAngle: .degrees(0),
     endAngle: .degrees(110),
     clockwise: true)
-  .stroke(.blue, lineWidth: 10)
+  .strokeBorder(.green, lineWidth: 40)
   .frame(width: 300, height: 300)
 """
 }

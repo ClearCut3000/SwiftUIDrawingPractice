@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  InitialView.swift
 //  SwiftUIDrawingPractice
 //
 //  Created by Николай Никитин on 12.09.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct InitialView: View {
   var body: some View {
     NavigationView {
       ZStack {
@@ -28,6 +28,11 @@ struct ContentView: View {
           } label: {
             Link(title: "ArcShape()")
           }
+          NavigationLink {
+            FlowerShape()
+          } label: {
+            Link(title: "FlowerShape()")
+          }
         }
       }
     }
@@ -39,18 +44,18 @@ struct Link: View {
   var body: some View {
     Text(title)
       .fontWeight(.bold)
-              .font(.title)
-              .foregroundColor(.orange)
-              .padding()
-              .overlay(
-                  RoundedRectangle(cornerRadius: 20)
-                      .stroke(Color.orange, lineWidth: 3)
-              )
+      .font(.title3)
+      .foregroundColor(.orange)
+      .padding(8)
+      .overlay(
+        RoundedRectangle(cornerRadius: 20)
+          .stroke(Color.orange, lineWidth: 3)
+      )
   }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        InitialView()
     }
 }

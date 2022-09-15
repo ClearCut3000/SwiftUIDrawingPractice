@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct TriangleShape: View {
-  @State private var webViewHeight: CGFloat = .zero
-
   var body: some View {
     ZStack {
       Color(UIHelper.backgroundDarkColor)
@@ -20,8 +18,13 @@ struct TriangleShape: View {
                                            lineCap: .round,
                                            lineJoin: .round))
           .frame(width: 250, height: 250)
-        SampleCodeView(htmlContentBody: codeHelper.triangleShapeCode)
+        SampleCodeView(htmlContentBody: CodeLibrary.triangleShapeCode)
+          .overlay(
+            RoundedRectangle(cornerRadius: 20)
+              .stroke(Color.orange, lineWidth: 3)
+          )
       }
+      .padding(10)
     }
   }
 }

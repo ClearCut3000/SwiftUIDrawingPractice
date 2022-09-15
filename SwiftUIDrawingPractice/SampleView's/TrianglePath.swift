@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct TrianglePath: View {
-
   var body: some View {
-    VStack {
+    VStack(spacing: 20) {
       Path { path in
         path.move(to: CGPoint(x: 200, y: 100))
         path.addLine(to: CGPoint(x: 100, y: 300))
@@ -20,7 +19,12 @@ struct TrianglePath: View {
       }
       .stroke(.blue, style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
       
-      SampleCodeView(htmlContentBody: codeHelper.triangleCode)
+      SampleCodeView(htmlContentBody: CodeLibrary.triangleCode)
+        .padding(5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.orange, lineWidth: 3)
+        )
     }
     .padding(10)
     .background(Color(UIHelper.backgroundDarkColor))
