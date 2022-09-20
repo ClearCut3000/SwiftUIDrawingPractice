@@ -123,4 +123,17 @@ Arc(startAngle: .degrees(0),
   .strokeBorder(.green, lineWidth: 40)
   .frame(width: 300, height: 300)
 """
+
+  static let ImagePaintSample = """
+Capsule()
+  .strokeBorder(
+    ImagePaint(image: Image("Example"),
+              sourceRect: CGRect(x: overlayXValue,
+                                  y: overlayYValue,
+                                  width: imageWidth,
+                                  height: imageHeight),
+              scale: 0.5),
+    lineWidth: 30)
+  .frame(width: 300, height: 200)
+"""
 }

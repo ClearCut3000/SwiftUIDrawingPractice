@@ -28,7 +28,7 @@ struct PopupCodeSample: View {
             }
           }
           .padding()
-          .frame(maxWidth: 300, maxHeight: 300)
+          .frame(maxWidth: UIScreen.main.bounds.size.width - 20, maxHeight: 300)
           .overlay(
             RoundedRectangle(cornerRadius: 20)
               .stroke(Color.orange, lineWidth: 3)
