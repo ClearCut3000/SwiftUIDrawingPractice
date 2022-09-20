@@ -13,25 +13,46 @@ struct InitialView: View {
       ZStack {
         Color(UIHelper.backgroundDarkColor).edgesIgnoringSafeArea(.all)
         VStack(spacing: 20) {
-          NavigationLink {
-            TrianglePath()
-          } label: {
-            Link(title: "TrianglePath()")
+          HStack(spacing: 20) {
+            NavigationLink {
+              TrianglePath()
+            } label: {
+              Link(title: "TrianglePath()")
+            }
+            NavigationLink {
+              TriangleShape()
+            } label: {
+              Link(title: "TriangleShape()")
+            }
+          }
+          HStack(spacing: 20) {
+            NavigationLink {
+              ArcShape()
+            } label: {
+              Link(title: "ArcShape()")
+            }
+            NavigationLink {
+              FlowerShape()
+            } label: {
+              Link(title: "FlowerShape()")
+            }
           }
           NavigationLink {
-            TriangleShape()
+            ImagePaintView()
           } label: {
-            Link(title: "TriangleShape()")
+            Link(title: "ImagePaintView()")
           }
           NavigationLink {
-            ArcShape()
+            MetalDrawingGroupView()
           } label: {
-            Link(title: "ArcShape()")
+            Link(title: "MetalDrawingGroupView()")
           }
-          NavigationLink {
-            FlowerShape()
-          } label: {
-            Link(title: "FlowerShape()")
+          HStack(alignment: .firstTextBaseline, spacing: 20) {
+            NavigationLink {
+              EffectsView()
+            } label: {
+              Link(title: "EffectsView()")
+            }
           }
         }
       }

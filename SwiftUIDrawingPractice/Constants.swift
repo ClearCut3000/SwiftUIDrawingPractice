@@ -124,7 +124,7 @@ Arc(startAngle: .degrees(0),
   .frame(width: 300, height: 300)
 """
 
-  static let ImagePaintSample = """
+  static let imagePaintSample = """
 Capsule()
   .strokeBorder(
     ImagePaint(image: Image("Example"),
@@ -135,5 +135,71 @@ Capsule()
               scale: 0.5),
     lineWidth: 30)
   .frame(width: 300, height: 200)
+"""
+
+  static let drawingGroupSample = """
+struct ColorCyclingView: View {
+
+  //MARK: - View Properties
+  var amount = 0.0
+  var steps = 100
+
+  //MARK: - View Body
+  var body: some View {
+    ZStack {
+      ForEach(0..<steps) { value in
+        Circle()
+          .inset(by: Double(value))
+          .strokeBorder(
+            LinearGradient(gradient: Gradient(colors: [
+              color(for: value, brightness: 1),
+              color(for: value, brightness: 0.5)
+            ]),
+                           startPoint: .top,
+                           endPoint: .bottom),
+            lineWidth: 2)
+      }
+    }
+    .drawingGroup()
+  }
+
+  //MARK: - View Methods
+  func color(for value: Int, brightness: Double) -> Color {
+    var targetHue = Double(value) / Double(steps) + amount
+    if targetHue > 1 {
+      targetHue -= 1
+    }
+    return Color(hue: targetHue, saturation: 1, brightness: brightness)
+  }
+}
+"""
+
+  static let effectsView = """
+// MARK: - Triple RGD Circles
+ZStack {
+  Circle()
+    .fill(Color(red: 1, green: 0, blue: 0))
+    .frame(width: 200 * amount)
+    .offset(x: -50, y: -80)
+    .blendMode(.screen)
+  Circle()
+    .fill(Color(red: 0, green: 1, blue: 0))
+    .frame(width: 200 * amount)
+    .offset(x: 50, y: -80)
+    .blendMode(.screen)
+  Circle()
+    .fill(Color(red: 0, green: 0, blue: 1))
+    .frame(width: 200 * amount)
+    .blendMode(.screen)
+}
+.frame(width: 300, height: 300)
+
+//MARK: - Image 
+Image("Example")
+  .resizable()
+  .scaledToFit()
+  .frame(width: 200, height: 200)
+  .saturation(amount)
+  .blur(radius: (1-amount) * 20)
 """
 }

@@ -57,7 +57,7 @@ struct ImagePaintView: View {
           }
         }
       }
-      PopupCodeSample(show: $isShowingCode, message: CodeLibrary.ImagePaintSample)
+      PopupCodeSample(show: $isShowingCode, message: CodeLibrary.imagePaintSample)
     }
   }
 }
