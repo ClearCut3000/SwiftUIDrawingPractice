@@ -12,6 +12,7 @@
 		366FE15728CFBBA30005209B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15628CFBBA30005209B /* Assets.xcassets */; };
 		366FE15A28CFBBA30005209B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366FE15928CFBBA30005209B /* Preview Assets.xcassets */; };
 		366FE16128CFBC790005209B /* TrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366FE16028CFBC790005209B /* TrianglePath.swift */; };
+		36B29B1D28EC74F1006C2F59 /* TrapezoidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B29B1C28EC74F0006C2F59 /* TrapezoidView.swift */; };
 		36C1F91C28DA08BD00F4487A /* ImagePaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C1F91B28DA08BD00F4487A /* ImagePaintView.swift */; };
 		36C1F92028DA26ED00F4487A /* MetalDrawingGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C1F91F28DA26ED00F4487A /* MetalDrawingGroupView.swift */; };
 		36C1F92228DA4BCB00F4487A /* EffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C1F92128DA4BCB00F4487A /* EffectsView.swift */; };
@@ -32,6 +33,7 @@
 		366FE15628CFBBA30005209B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		366FE15928CFBBA30005209B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		366FE16028CFBC790005209B /* TrianglePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrianglePath.swift; sourceTree = "<group>"; };
+		36B29B1C28EC74F0006C2F59 /* TrapezoidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapezoidView.swift; sourceTree = "<group>"; };
 		36C1F91B28DA08BD00F4487A /* ImagePaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintView.swift; sourceTree = "<group>"; };
 		36C1F91F28DA26ED00F4487A /* MetalDrawingGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawingGroupView.swift; sourceTree = "<group>"; };
 		36C1F92128DA4BCB00F4487A /* EffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				36C1F91B28DA08BD00F4487A /* ImagePaintView.swift */,
 				36C1F91F28DA26ED00F4487A /* MetalDrawingGroupView.swift */,
 				36C1F92128DA4BCB00F4487A /* EffectsView.swift */,
+				36B29B1C28EC74F0006C2F59 /* TrapezoidView.swift */,
 			);
 			path = "SampleView's";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				366FE16128CFBC790005209B /* TrianglePath.swift in Sources */,
 				36E92C5328D3BB0C0058C7E5 /* PopupCodeSample.swift in Sources */,
 				36E92C4628D253DE0058C7E5 /* ArcShape.swift in Sources */,
+				36B29B1D28EC74F1006C2F59 /* TrapezoidView.swift in Sources */,
 				366FE15528CFBB9D0005209B /* InitialView.swift in Sources */,
 				36E92C4228D117920058C7E5 /* Constants.swift in Sources */,
 				36C1F92028DA26ED00F4487A /* MetalDrawingGroupView.swift in Sources */,

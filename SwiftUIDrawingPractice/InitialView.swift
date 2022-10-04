@@ -53,6 +53,11 @@ struct InitialView: View {
             } label: {
               Link(title: "EffectsView()")
             }
+            NavigationLink {
+              TrapezoidView()
+            } label: {
+              Link(title: "TrapezoidView()")
+            }
           }
         }
       }
