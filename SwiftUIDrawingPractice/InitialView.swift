@@ -59,6 +59,11 @@ struct InitialView: View {
               Link(title: "TrapezoidView()")
             }
           }
+          NavigationLink {
+            CheckerboardView()
+          } label: {
+            Link(title: "CheckerboardView()")
+          }
         }
       }
     }
