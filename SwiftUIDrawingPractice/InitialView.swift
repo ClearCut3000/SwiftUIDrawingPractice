@@ -64,6 +64,11 @@ struct InitialView: View {
           } label: {
             Link(title: "CheckerboardView()")
           }
+          NavigationLink {
+            SpirographView()
+          } label: {
+            Link(title: "SpirographView()")
+          }
         }
       }
     }
